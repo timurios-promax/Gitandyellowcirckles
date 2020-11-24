@@ -34,7 +34,7 @@ class Example(QWidget):
         self.r = random.randint(0, 255)
         self.g = random.randint(0, 255)
         self.b = random.randint(0, 255)
-        self.qp.setBrush(QColor(self.r, self.g, self.b))
+        self.qp.setBrush(QColor(255, 179, 0))
 
     def draw(self, status):
         self.size = random.randint(10, 100)
