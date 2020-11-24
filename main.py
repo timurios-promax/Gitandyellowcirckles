@@ -14,7 +14,7 @@ class Window(QMainWindow):
         self.coords = []
         self.qp = QPainter()
         self.flag = False
-        self.statue = None
+        self.status = None
         self.startbtn.clicked.connect(self.star)
 
     def drawf(self):
@@ -45,7 +45,7 @@ class Window(QMainWindow):
         self.show()
 
     def star(self):
-        self.coords = [10, 10]
+        self.coords = [random.randint(10, 100), random.randint(10, 100)]
         self.drawf()
 
 
