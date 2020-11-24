@@ -5,12 +5,13 @@ from PyQt5 import uic
 from PyQt5.QtCore import QPoint, Qt
 from PyQt5.QtGui import QPolygon, QPainter, QColor
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
+from UI import Ui_MainWindow
 
 
-class Window(QMainWindow):
+class Window(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setupUi(self)
         self.coords = []
         self.qp = QPainter()
         self.flag = False
