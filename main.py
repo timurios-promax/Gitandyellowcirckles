@@ -1,14 +1,13 @@
 import random
 import sys
 
-from PyQt5.QtCore import Qt
-from PyQt5.QtCore import QPoint
-from PyQt5.QtGui import QPolygon, QPainter, QColor
-from PyQt5.QtWidgets import QWidget, QApplication
 from PyQt5 import uic
+from PyQt5.QtCore import QPoint, Qt
+from PyQt5.QtGui import QPolygon, QPainter, QColor
+from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
 
 
-class Example(QWidget):
+class Window(QMainWindow):
     def __init__(self):
         super().__init__()
         uic.loadUi('UI.ui', self)
@@ -52,5 +51,6 @@ class Example(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = Example()
+    ex = Window()
+    ex.show()
     sys.exit(app.exec_())
