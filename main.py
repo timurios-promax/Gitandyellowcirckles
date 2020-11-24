@@ -34,7 +34,7 @@ class Window(QMainWindow, Ui_MainWindow):
         self.r = random.randint(0, 255)
         self.g = random.randint(0, 255)
         self.b = random.randint(0, 255)
-        self.qp.setBrush(QColor(255, 179, 0))
+        self.qp.setBrush(QColor(self.r, self.b, self.b))
 
     def draw(self, status):
         self.size = random.randint(10, 100)
